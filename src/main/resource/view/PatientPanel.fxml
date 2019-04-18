@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="779.0" prefWidth="1154.0" style="-fx-background-color: #fdffdf;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.resource.view.PatientPanel">
+   <children>
+      <Group layoutX="-39.0" layoutY="-25.0" AnchorPane.bottomAnchor="80.0" AnchorPane.rightAnchor="60.0">
+         <children>
+            <JFXComboBox focusColor="#c7b3e5" labelFloat="true" layoutX="933.0" layoutY="311.0" prefHeight="48.0" prefWidth="207.0" promptText="Section" unFocusColor="BLACK">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </effect>
+            </JFXComboBox>
+            <JFXComboBox focusColor="#c7b3e5" labelFloat="true" layoutX="933.0" layoutY="561.0" prefHeight="48.0" prefWidth="207.0" promptText="Register name" unFocusColor="BLACK">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </effect>
+            </JFXComboBox>
+            <JFXComboBox focusColor="#c7b3e5" labelFloat="true" layoutX="933.0" layoutY="472.0" prefHeight="48.0" prefWidth="207.0" promptText="Register category" unFocusColor="BLACK">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </effect>
+            </JFXComboBox>
+            <JFXComboBox focusColor="#c7b3e5" labelFloat="true" layoutX="933.0" layoutY="391.0" prefHeight="48.0" prefWidth="207.0" promptText="Doctor's name" unFocusColor="BLACK">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </effect>
+            </JFXComboBox>
+            <Label layoutX="933.0" layoutY="640.0" prefHeight="48.0" prefWidth="207.0" text="Fee : ">
+               <font>
+                  <Font name="Source Code Pro Bold" size="20.0" />
+               </font>
+            </Label>
+            <JFXButton buttonType="RAISED" layoutX="933.0" layoutY="710.0" prefHeight="48.0" prefWidth="207.0" style="-fx-background-color: #daf9ca;" text="CHECKOUT">
+               <font>
+                  <Font name="DejaVu Sans Mono for Powerline Bold" size="20.0" />
+               </font>
+               <tooltip>
+                  <Tooltip text="Just click it" />
+               </tooltip>
+            </JFXButton>
+         </children>
+      </Group>
+      <JFXToolbar layoutX="935.0" layoutY="707.0" prefHeight="32.0" prefWidth="123.0" />
+      <TreeTableView layoutX="14.0" layoutY="233.0" prefHeight="466.0" prefWidth="765.0" AnchorPane.bottomAnchor="80.0" AnchorPane.leftAnchor="60.0">
+        <columns>
+          <TreeTableColumn prefWidth="75.0" text="C1" />
+          <TreeTableColumn prefWidth="75.0" text="C2" />
+        </columns>
+      </TreeTableView>
+      <ImageView fitHeight="126.0" fitWidth="135.0" layoutX="937.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/serum.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="60.0" layoutY="63.0" text="Hello， Mr">
+         <font>
+            <Font name="Source Code Pro Bold" size="22.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXToggleButton?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: f6f6f6;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.controllers.Login">
+   <children>
+      <JFXButton fx:id="loginButton" buttonType="RAISED" layoutX="206.0" layoutY="318.0" prefHeight="42.0" prefWidth="188.0" ripplerFill="#d6e663" style="-fx-background-color: #ffab63;" text="Login" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font name="Source Code Pro Bold" size="16.0" />
+         </font></JFXButton>
+      <Group>
+         <children>
+            <ImageView fx:id="doctorImageF" fitHeight="84.0" fitWidth="113.0" layoutX="14.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/doctor.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="doctorImageM" fitHeight="117.0" fitWidth="84.0" layoutX="98.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/doctorman.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Group>
+      <ImageView fx:id="patientImage" fitHeight="84.0" fitWidth="84.0" layoutX="502.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/serum.png" />
+         </image>
+      </ImageView>
+      <Group layoutX="41.0" layoutY="-29.0">
+         <children>
+            <JFXTextField fx:id="usernameField" layoutX="191.0" layoutY="196.0" prefHeight="25.0" prefWidth="219.0" />
+            <Label fx:id="userLabel" layoutX="105.0" layoutY="198.0" text="UserName">
+               <font>
+                  <Font name="Source Code Pro" size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </Group>
+      <Group />
+      <Group layoutX="43.0" layoutY="-32.0">
+         <children>
+            <Label fx:id="passLabel" layoutX="105.0" layoutY="240.0" text="Password">
+               <font>
+                  <Font name="Source Code Pro" size="16.0" />
+               </font>
+            </Label>
+            <JFXPasswordField fx:id="passwordField" layoutX="193.0" layoutY="238.0" prefHeight="25.0" prefWidth="219.0" />
+         </children>
+      </Group>
+      <JFXToggleButton fx:id="isDoctorToggle" layoutX="228.0" layoutY="248.0" prefHeight="42.0" prefWidth="141.0" style="-fx-background-color: #f6f6f6;" text="I'm a doctor" />
+      <Label fx:id="usernameFieldPrompt" layoutX="462.0" layoutY="170.0" text="Empty!" textFill="RED">
+         <font>
+            <Font name="Source Code Pro" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="passwordFieldPrompt" layoutX="462.0" layoutY="209.0" text="Empty!" textFill="RED">
+         <font>
+            <Font name="Source Code Pro" size="16.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
