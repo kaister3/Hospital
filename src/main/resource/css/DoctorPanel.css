@@ -1,0 +1,14 @@
+.tree-table-cell {
+    -fx-alignment: center ;
+}
+
+.jfx-tab-pane .headers-region {
+    -fx-background-color: #495a80;
+}
+.jfx-tab-pane .tab-header-background {
+    -fx-background-color: #495a80;
+}
+.jfx-tab-pane .tab-selected-line {
+    -fx-stroke: #ffab63;
+    -fx-stroke-width: 3pt;
+}

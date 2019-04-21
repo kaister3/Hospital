@@ -33,11 +33,10 @@
     <orderEntry type="module-library" exported="">
       <library>
         <CLASSES>
-          <root url="file://C:/tools/bin/hibernate-release-5.4.2.Final/lib" />
+          <root url="jar://C:/tools/bin/mysql-connector-java-8.0.15/mysql-connector-java-8.0.15.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
-        <jarDirectory url="file://C:/tools/bin/hibernate-release-5.4.2.Final/lib" recursive="false" />
       </library>
     </orderEntry>
   </component>

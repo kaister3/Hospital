@@ -1,113 +1,80 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.jfoenix.controls.*?>
-<?import java.lang.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
 <?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
 <?import com.jfoenix.controls.JFXSpinner?>
 <?import com.jfoenix.controls.JFXTabPane?>
+<?import com.jfoenix.controls.JFXTimePicker?>
 <?import com.jfoenix.controls.JFXToggleButton?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.Group?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Tab?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TreeTableColumn?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="763.0" prefWidth="1162.0" style="-fx-background-color: c7ffec;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.resource.view.DoctorPanel">
+<AnchorPane prefHeight="763.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.controllers.DoctorPanel">
    <children>
-      <JFXTabPane layoutX="36.0" layoutY="97.0" prefHeight="666.0" prefWidth="1162.0" style="-fx-background-color: c7ffec;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="97.0">
+      <JFXTabPane fx:id="tabPane" cacheShape="false" centerShape="false" focusTraversable="false" layoutX="36.0" layoutY="114.0" prefHeight="649.0" prefWidth="1200.0" scaleShape="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="114.0">
          <tabs>
-            <Tab text="Patient List">
+            <Tab fx:id="patientTab" text="Patient List">
               <content>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
-                        <TableView prefHeight="628.0" prefWidth="1162.0" style="-fx-background-color: aecbf;">
-                          <columns>
-                            <TableColumn editable="false" prefWidth="219.0" text="Identifier" />
-                            <TableColumn editable="false" prefWidth="195.0" text="FirstName" />
-                              <TableColumn editable="false" prefWidth="174.0" text="LastName" />
-                              <TableColumn prefWidth="193.0" text="Gender'" />
-                              <TableColumn editable="false" prefWidth="186.0" text="Regiser Date" />
-                              <TableColumn editable="false" prefWidth="269.0" text="Category" />
-                          </columns>
-                        </TableView>
+                        <JFXTreeTableView fx:id="patientTable" prefHeight="612.0" prefWidth="1200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                           <columns>
+                              <TreeTableColumn fx:id="columnId" prefWidth="193.00003051757812" resizable="false" text="Identifier" />
+                              <TreeTableColumn fx:id="columnPatientName" prefWidth="276.0" resizable="false" text="PatientName" />
+                              <TreeTableColumn fx:id="columnDate" prefWidth="408.0" resizable="false" text="Date&amp;Time" />
+                              <TreeTableColumn fx:id="columnType" prefWidth="321.0" resizable="false" text="Category" />
+                           </columns></JFXTreeTableView>
                      </children>
                   </AnchorPane>
               </content>
             </Tab>
-            <Tab text="Salary">
+            <Tab fx:id="salaryTab" text="Salary">
               <content>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
-                        <Group layoutX="274.0" layoutY="6.0">
-                           <children>
-                              <DatePicker layoutX="407.0" layoutY="18.0" />
-                              <Label layoutX="333.0" layoutY="19.0" text="To">
-                                 <font>
-                                    <Font name="Source Code Pro" size="18.0" />
-                                 </font>
-                              </Label>
-                              <Label layoutX="33.0" layoutY="19.0" text="From">
-                                 <font>
-                                    <Font name="Source Code Pro" size="18.0" />
-                                 </font>
-                              </Label>
-                              <DatePicker layoutX="118.0" layoutY="18.0" />
-                           </children>
-                        </Group>
-                        <AnchorPane layoutY="58.0" prefHeight="573.0" prefWidth="1162.0">
-                           <children>
-                              <TreeTableView layoutX="14.0" layoutY="14.0" prefHeight="547.0" prefWidth="1139.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0">
-                                <columns>
-                                  <TreeTableColumn prefWidth="182.0" text="Section Office" />
-                                  <TreeTableColumn prefWidth="187.0" text="Doctor Identifier" />
-                                    <TreeTableColumn prefWidth="130.0" text="Doctor Name" />
-                                    <TreeTableColumn prefWidth="234.0" text="Categary" />
-                                    <TreeTableColumn prefWidth="199.0" text="Patients" />
-                                    <TreeTableColumn prefWidth="201.0" text="Salary" />
-                                </columns>
-                              </TreeTableView>
-                           </children>
-                        </AnchorPane>
-                        <JFXButton layoutX="982.0" layoutY="19.0" style="-fx-background-color: #FFE669;" text="Refresh">
-                           <font>
-                              <Font name="Source Code Pro Bold" size="18.0" />
-                           </font>
-                        </JFXButton>
+                        <JFXTreeTableView fx:id="salaryTable" prefHeight="611.0" prefWidth="1200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                           <columns>
+                              <TreeTableColumn fx:id="columnOffice" prefWidth="192.0" resizable="false" text="Office" />
+                              <TreeTableColumn fx:id="columnDId" prefWidth="167.0" resizable="false" text="Doctor Identifier" />
+                              <TreeTableColumn fx:id="columnDName" prefWidth="189.0" resizable="false" text="DoctorName" />
+                              <TreeTableColumn fx:id="columnDType" prefWidth="223.0" resizable="false" text="Type" />
+                              <TreeTableColumn fx:id="columnRegistered" prefWidth="202.0" resizable="false" text="Registered" />
+                              <TreeTableColumn fx:id="columnIncome" prefWidth="226.0" resizable="false" text="Income" />
+                           </columns>
+                        </JFXTreeTableView>
                      </children></AnchorPane>
               </content>
             </Tab>
-            <Tab text="Help">
+            <Tab fx:id="helpTab" text="Help">
               <content>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: 123456;">
                      <children>
-                        <JFXToggleButton layoutX="71.0" layoutY="286.0" text="Eye Protection Mode" toggleColor="#ddf0ed" />
-                        <JFXButton buttonType="RAISED" layoutX="370.0" layoutY="293.0" prefHeight="44.0" prefWidth="150.0" ripplerFill="#7dd1f0" style="-fx-background-color: #ddf0ed;" text="Exit">
+                        <JFXToggleButton fx:id="eyeProtect" layoutX="71.0" layoutY="286.0" text="Eye Protection Mode" toggleColor="#ddf0ed" />
+                        <JFXButton fx:id="exitButton" buttonType="RAISED" layoutX="370.0" layoutY="293.0" prefHeight="44.0" prefWidth="150.0" ripplerFill="#7dd1f0" style="-fx-background-color: #ddf0ed;" text="Exit">
                            <font>
                               <Font name="Source Code Pro Bold" size="18.0" />
                            </font>
                         </JFXButton>
-                        <JFXButton buttonType="RAISED" layoutX="647.0" layoutY="293.0" prefHeight="44.0" prefWidth="150.0" ripplerFill="#c2b5fa" style="-fx-background-color: #ddf0ed;" text="Game">
+                        <JFXButton fx:id="gameButton" buttonType="RAISED" layoutX="647.0" layoutY="293.0" prefHeight="44.0" prefWidth="150.0" ripplerFill="#c2b5fa" style="-fx-background-color: #ddf0ed;" text="Game">
                            <font>
                               <Font name="Source Code Pro Bold" size="18.0" />
                            </font>
                         </JFXButton>
-                        <JFXButton buttonType="RAISED" layoutX="897.0" layoutY="293.0" prefHeight="44.0" prefWidth="150.0" ripplerFill="#7dd1f0" style="-fx-background-color: #ddf0ed;" text="About">
+                        <JFXButton fx:id="aboutButton" buttonType="RAISED" layoutX="897.0" layoutY="293.0" prefHeight="44.0" prefWidth="150.0" ripplerFill="#7dd1f0" style="-fx-background-color: #ddf0ed;" text="About">
                            <font>
                               <Font name="Source Code Pro Bold" size="18.0" />
                            </font>
                         </JFXButton>
-                        <JFXSpinner layoutX="487.0" layoutY="72.0" prefHeight="116.0" prefWidth="188.0" />
-                        <Label layoutX="480.0" layoutY="596.0" text="copyright Kris Wang 2019">
+                        <JFXSpinner fx:id="spinner" layoutX="487.0" layoutY="72.0" prefHeight="116.0" prefWidth="188.0" />
+                        <Label fx:id="copyrightLabel" layoutX="480.0" layoutY="596.0" text="copyright Kris Wang 2019">
                            <font>
                               <Font name="Source Code Pro Black" size="14.0" />
                            </font>
@@ -121,29 +88,44 @@
             </Tab>
          </tabs>
       </JFXTabPane>
-      <Label layoutX="14.0" layoutY="14.0" text="Hello doctor, Have a nice day." wrapText="true">
+      <Label fx:id="greetingLabel" layoutX="40.0" layoutY="10.0" text="Hello doctor, Have a nice day." wrapText="true">
          <font>
             <Font name="Noto Mono for Powerline" size="22.0" />
          </font>
       </Label>
-      <Group>
+      <Group />
+      <Group layoutX="14.0" layoutY="61.0">
          <children>
-            <ImageView fitHeight="98.0" fitWidth="94.0" layoutX="1054.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../image/doctor.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="106.0" fitWidth="94.0" layoutX="960.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../image/doctorman.png" />
-               </image>
-            </ImageView>
+            <Label fx:id="toLabel" layoutX="435.0" layoutY="3.0" text="To">
+               <font>
+                  <Font name="Source Code Pro" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="fromLabel" layoutY="3.0" text="From">
+               <font>
+                  <Font name="Source Code Pro" size="18.0" />
+               </font>
+            </Label>
+            <JFXDatePicker fx:id="startDate" layoutX="68.0" />
+            <JFXDatePicker fx:id="endDate" layoutX="489.0" layoutY="3.0" />
+            <JFXTimePicker fx:id="startTime" layoutX="251.0" layoutY="2.0" />
+            <JFXTimePicker fx:id="endTime" layoutX="675.0" layoutY="3.0" />
          </children>
       </Group>
-      <Label layoutX="14.0" layoutY="49.0" text="Time">
+      <JFXButton fx:id="reFreshButton" buttonType="RAISED" contentDisplay="CENTER" layoutX="883.0" layoutY="58.0" ripplerFill="#00ddff" style="-fx-background-color: #f6f6f6;" text="Refresh" textOverrun="CLIP" wrapText="true">
          <font>
-            <Font name="Source Code Pro" size="18.0" />
+            <Font name="Source Code Pro Bold" size="18.0" />
          </font>
-      </Label>
+      </JFXButton>
+      <ImageView fx:id="doctorFemale" fitHeight="98.0" fitWidth="94.0" layoutX="1106.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/doctor.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="doctorMale" fitHeight="106.0" fitWidth="94.0" layoutX="1012.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/doctorman.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

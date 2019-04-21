@@ -13,7 +13,7 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: f6f6f6;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.controllers.Login">
    <children>
-      <JFXButton fx:id="loginButton" buttonType="RAISED" layoutX="206.0" layoutY="318.0" prefHeight="42.0" prefWidth="188.0" ripplerFill="#d6e663" style="-fx-background-color: #ffab63;" text="Login" textAlignment="CENTER" wrapText="true">
+      <JFXButton fx:id="loginButton" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" layoutX="206.0" layoutY="318.0" prefHeight="42.0" prefWidth="188.0" ripplerFill="#d6e663" style="-fx-background-color: #ffab63;" text="Login" textAlignment="CENTER" textOverrun="CLIP" wrapText="true">
          <font>
             <Font name="Source Code Pro Bold" size="16.0" />
          </font></JFXButton>
@@ -38,8 +38,8 @@
       </ImageView>
       <Group layoutX="41.0" layoutY="-29.0">
          <children>
-            <JFXTextField fx:id="usernameField" layoutX="191.0" layoutY="196.0" prefHeight="25.0" prefWidth="219.0" />
-            <Label fx:id="userLabel" layoutX="105.0" layoutY="198.0" text="UserName">
+            <JFXTextField fx:id="usernameField" layoutX="191.0" layoutY="196.0" prefHeight="25.0" prefWidth="203.0" />
+            <Label fx:id="userLabel" layoutX="105.0" layoutY="199.0" text="UserName">
                <font>
                   <Font name="Source Code Pro" size="16.0" />
                </font>
@@ -49,21 +49,21 @@
       <Group />
       <Group layoutX="43.0" layoutY="-32.0">
          <children>
-            <Label fx:id="passLabel" layoutX="105.0" layoutY="240.0" text="Password">
+            <Label fx:id="passLabel" layoutX="105.0" layoutY="241.0" text="Password">
                <font>
                   <Font name="Source Code Pro" size="16.0" />
                </font>
             </Label>
-            <JFXPasswordField fx:id="passwordField" layoutX="193.0" layoutY="238.0" prefHeight="25.0" prefWidth="219.0" />
+            <JFXPasswordField fx:id="passwordField" layoutX="188.0" layoutY="239.0" prefHeight="25.0" prefWidth="207.0" />
          </children>
       </Group>
-      <JFXToggleButton fx:id="isDoctorToggle" layoutX="228.0" layoutY="248.0" prefHeight="42.0" prefWidth="141.0" style="-fx-background-color: #f6f6f6;" text="I'm a doctor" />
-      <Label fx:id="usernameFieldPrompt" layoutX="462.0" layoutY="170.0" text="Empty!" textFill="RED">
+      <JFXToggleButton fx:id="isDoctorToggle" layoutX="228.0" layoutY="248.0" prefHeight="42.0" prefWidth="141.0" text="I'm a doctor" />
+      <Label fx:id="usernameFieldPrompt" layoutX="444.0" layoutY="170.0" text="Empty!" textFill="RED">
          <font>
             <Font name="Source Code Pro" size="16.0" />
          </font>
       </Label>
-      <Label fx:id="passwordFieldPrompt" layoutX="462.0" layoutY="209.0" text="Empty!" textFill="RED">
+      <Label fx:id="passwordFieldPrompt" layoutX="444.0" layoutY="210.0" text="Empty!" textFill="RED">
          <font>
             <Font name="Source Code Pro" size="16.0" />
          </font>
